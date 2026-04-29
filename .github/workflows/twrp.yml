@@ -123,7 +123,7 @@ jobs:
           # ✅ إصلاح SDK versions - حذف 33 لأنه غير مدعوم في TWRP 12.1
           sed -i '/BOARD_SYSTEMSDK_VERSIONS/d' BoardConfig.mk || true
           sed -i '/PRODUCT_SHIPPING_API_LEVEL/d' BoardConfig.mk || true
-          echo "BOARD_SYSTEMSDK_VERSIONS := 28 29 30 31 32" >> BoardConfig.mk
+          echo "BOARD_SYSTEMSDK_VERSIONS := 32" >> BoardConfig.mk
           echo "✅ SDK versions updated (max 32)"
 
           grep "PARTITION_LIST" BoardConfig.mk || echo "⚠️ PARTITION_LIST not found"
